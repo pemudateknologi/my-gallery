@@ -1,0 +1,183 @@
+/** @format */
+
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ddd;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgb(29, 129, 129);
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  transition: all 0.3s;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav h1 {
+  color: white;
+}
+
+.container {
+  padding: 10px 30px;
+}
+
+.hero-container {
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-container input {
+  width: 20%;
+  padding: 6px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 3px solid rgb(29, 129, 129);
+}
+
+.hero-container button {
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(29, 129, 129);
+  padding: 6px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-container h1 {
+  font-size: 35px;
+  color: black;
+}
+
+.info-container {
+  margin-top: 50px;
+  width: auto;
+  height: 100vh;
+  overflow: auto;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0, 5);
+  border-radius: 30px;
+  background-color: white;
+}
+
+.info-container .foto-cowok img,
+.foto-perempuan img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.info-container .foto-cowok ul,
+.info-container .foto-perempuan ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  justify-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.info-container .foto-cowok ul li {
+  text-align: center;
+}
+.info-container .foto-cowok ul li h5 {
+  width: 70%;
+  margin: auto;
+}
+
+nav span {
+  color: white;
+  font-size: 30px;
+}
+
+@media (max-width: 500px) {
+  nav {
+    padding: 5px 10px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  nav h1 {
+    font-size: 20px;
+  }
+
+  nav ul {
+    position: absolute;
+    background-color: rgb(29, 129, 129);
+    top: 100%;
+    width: 80%;
+    right: -100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 2rem;
+    border-radius: 10px;
+  }
+  nav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  .hero-container h1 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .hero-container input {
+    width: 50%;
+  }
+}
